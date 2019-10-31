@@ -1,0 +1,60 @@
+plugins: badfiles convert edit fetchart missing scrub replaygain 
+directory: /mnt/hubbe/array/Music
+library: /mnt/hubbe/array/Music/library.blb
+art_filename: cover
+threaded: yes
+original_date: yes
+per_disc_numbering: yes
+
+convert:
+    copy_album_art: yes
+    dest: /mnt/hubbe/array/Sync/Music
+    embed: no
+    format: ogg
+    no_convert: format:MP3
+    never_convert_lossy_files: yes
+    formats:
+        mp3:
+            command: /mnt/hubbe/array/Scripts/convert_to_mp3.sh $source $dest
+            extension: mp3
+        ogg:
+            command: ffmpeg -i $source -c:a libvorbis -aq 4 $dest
+            extension: ogg
+        opus:
+            command: ffmpeg -i $source -c:a libopus -q:a 64k $dest
+            extension: ogg
+
+asciify_paths: yes    
+paths:
+    default: $albumartist/$original_year-$album%aunique{}/$disc.$track - $title
+        
+import:
+    write: yes
+    copy: yes
+    move: no
+    resume: ask
+    incremental: yes
+    quiet_fallback: skip
+    timid: no
+
+fetchart:
+    auto: yes
+    
+replaygain:
+    auto: yes
+    backend: gstreamer
+
+scrub:
+    auto: yes
+
+replace:
+    '^\.': _
+    '[\x00-\x1f]': _
+    '[<>:"\?\*\|]': _
+    '[\xE8-\xEB]': e
+    '[\xEC-\xEF]': i
+    '[\xE2-\xE6]': a
+    '[\xF2-\xF6]': o
+    '[\xF8]': o
+    '\.$': _
+    '\s+$': ''
