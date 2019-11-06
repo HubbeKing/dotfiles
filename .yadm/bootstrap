@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# ensure pikaur AUR helper is installed
+if ! which pikaur; then
+    sudo pacman -Syu --needed base-devel git
+    cd /tmp
+    git clone https://aur.archlinux.org/pikaur.git
+    cd pikaur
+    makepkg -fsri
+fi
+
+# install things that need to exist not to break configs
+pikaur -Syu --needed \
+docker docker-compose \
+ffmpeg \
+kitty \
+nano-syntax-highlighting \
+pbzip2 \    # parallel bz2 compressor
+pigz \      # parallel gz compressor
+reflector
