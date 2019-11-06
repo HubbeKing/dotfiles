@@ -10,11 +10,4 @@ if ! which pikaur; then
 fi
 
 # install things that need to exist not to break configs
-pikaur -Syu --needed \
-docker docker-compose \
-ffmpeg \
-kitty \
-nano-syntax-highlighting \
-pbzip2 \    # parallel bz2 compressor
-pigz \      # parallel gz compressor
-reflector
+pikaur -Syu --needed docker docker-compose ffmpeg kitty nano-syntax-highlighting pbzip2 pigz reflector
