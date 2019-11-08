@@ -8,5 +8,7 @@ alias ffprobe='ffprobe -hide_banner'
 alias dc='docker-compose'
 alias diskmon='watch -n 1 iostat -xy --human 1 1'
 alias conv_music='beet convert -a'
+alias weechat='mosh hubbe.club -- /home/hubbe/scripts/weechat.sh'
 
 PS1='[\u@\h \W]\$ '
+
