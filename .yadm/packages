@@ -5,6 +5,7 @@ docker-compose
 ffmpeg
 kitty
 mosh
+mpv
 nano-syntax-highlighting
 noto-fonts
 noto-fonts-cjk
