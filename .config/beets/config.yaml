@@ -1,7 +1,7 @@
 plugins: badfiles convert edit fetchart missing scrub replaygain 
 directory: /mnt/hubbe/array/Music
 library: /mnt/hubbe/array/Music/library.blb
-art_filename: cover
+art_filename: folder
 threaded: yes
 original_date: yes
 per_disc_numbering: yes
