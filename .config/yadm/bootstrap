@@ -6,8 +6,8 @@ if ! which pikaur; then
     cd /tmp
     git clone https://aur.archlinux.org/pikaur.git
     cd pikaur
-    makepkg -fsri
+    makepkg -fsri --noconfirm
 fi
 
 # install things that need to exist not to break configs
-pikaur -Syu --needed - < ~/.config/yadm/packages
+pikaur -Syu --needed --noconfirm - < ~/.config/yadm/packages
