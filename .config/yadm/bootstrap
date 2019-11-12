@@ -10,4 +10,4 @@ if ! which pikaur; then
 fi
 
 # install things that need to exist not to break configs
-pikaur -Syu --needed - < ~/.yadm/packages
+pikaur -Syu --needed - < ~/.config/yadm/packages
