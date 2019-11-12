@@ -8,7 +8,7 @@ alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 alias ls='ls --color=auto'
 alias mpv='mpv --hwdec=auto'
-alias pacrepo='sudo reflector --country Finland --country Germany --country Sweden --age 24 --sort rate --save /etc/pacman.d/mirrorlist'
+alias pacrepo='sudo reflector --country Finland --country Germany --country Sweden --protocol https --protocol rsync --age 24 --sort rate --save /etc/pacman.d/mirrorlist'
 alias streamlink='streamlink --player="mpv --hwdec=auto" --player-passthrough hls'
 alias weechat='mosh hubbe.club -- /home/hubbe/scripts/weechat.sh'
 
