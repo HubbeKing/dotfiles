@@ -18,10 +18,10 @@ convert:
             command: /mnt/hubbe/array/Scripts/convert_to_mp3.sh $source $dest
             extension: mp3
         ogg:
-            command: ffmpeg -i $source -c:a libvorbis -aq 4 $dest
+            command: ffmpeg -i $source -c:a libvorbis -aq 4 -af aresample=resampler=soxr -ar 44100 $dest
             extension: ogg
         opus:
-            command: ffmpeg -i $source -c:a libopus -q:a 64k $dest
+            command: ffmpeg -i $source -c:a libopus -q:a 64k -af aresample=resampler=soxr -ar 44100 $dest
             extension: ogg
 
 asciify_paths: yes    
