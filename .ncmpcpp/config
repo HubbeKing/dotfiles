@@ -22,9 +22,9 @@
 #
 ##### connection settings #####
 #
-mpd_host = hubbe.club
+mpd_host = valkyrie.local
 #
-#mpd_port = 6600
+mpd_port = 30060
 #
 #mpd_connection_timeout = 5
 #
