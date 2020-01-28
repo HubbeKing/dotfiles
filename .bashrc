@@ -12,4 +12,6 @@ alias pacrepo='sudo reflector --country Finland --country Germany --country Swed
 alias streamlink='streamlink --player="mpv --hwdec=auto" --player-passthrough hls'
 alias weechat='mosh hubbe.club -- /home/hubbe/scripts/weechat.sh'
 
+export SOPS_PGP_FP="936E0D27CC44F2E780AD4397CC2FB121243FEF14"
+
 PS1='[\u@\h \W]\$ '
