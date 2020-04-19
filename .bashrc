@@ -12,6 +12,8 @@ alias mpv='mpv --hwdec=auto'
 alias pacrepo='sudo reflector --country Finland --country Germany --country Sweden --protocol https --protocol rsync --age 24 --sort rate --save /etc/pacman.d/mirrorlist'
 alias streamlink='streamlink --player="mpv --hwdec=auto" --player-passthrough hls'
 alias weechat='mosh hubbe.club -- /home/hubbe/scripts/weechat.sh'
+alias workon='mv .ssh/work_config .ssh/config'
+alias workoff='mv .ssh/config .ssh/work_config'
 
 export SOPS_PGP_FP="936E0D27CC44F2E780AD4397CC2FB121243FEF14"
 
