@@ -26,4 +26,6 @@ reflector
 rtmpdump
 rsync
 streamlink
+xclip
+xdotool
 youtube-dl
