@@ -7,12 +7,11 @@ original_date: yes
 per_disc_numbering: yes
 
 convert:
-    copy_album_art: yes
+    copy_album_art: no
     dest: /mnt/hubbe/array/Sync/Music
-    embed: no
+    embed: yes
     format: ogg
-    no_convert: format:MP3
-    never_convert_lossy_files: yes
+    never_convert_lossy_files: no
     formats:
         mp3:
             command: /mnt/hubbe/array/Scripts/convert_to_mp3.sh $source $dest
@@ -21,7 +20,7 @@ convert:
             command: ffmpeg -i $source -c:a libvorbis -aq 4 -af aresample=resampler=soxr -ar 44100 -vn $dest
             extension: ogg
         opus:
-            command: ffmpeg -i $source -c:a libopus -q:a 64k -af aresample=resampler=soxr -ar 44100 -vn $dest
+            command: ffmpeg -i $source -c:a libopus -b:a 64k -af aresample=resampler=soxr -ar 48000 -vn $dest
             extension: ogg
 
 asciify_paths: yes    
