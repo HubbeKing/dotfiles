@@ -1,2 +1,4 @@
 player=mpv
 player-passthrough=hls
+twitch-low-latency
+twitch-disable-ads
