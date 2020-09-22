@@ -2,3 +2,6 @@ player=mpv
 player-passthrough=hls
 twitch-low-latency
 twitch-disable-ads
+default-stream=best
+retry-streams=5
+retry-open=60
