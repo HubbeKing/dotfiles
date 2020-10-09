@@ -1,4 +1,4 @@
-plugins: badfiles convert edit fetchart missing scrub replaygain 
+plugins: badfiles convert edit fetchart mbsync missing scrub replaygain
 directory: /mnt/hubbe/array/Music
 library: /mnt/hubbe/array/Music/library.blb
 art_filename: folder
@@ -10,7 +10,7 @@ convert:
     copy_album_art: no
     dest: /mnt/hubbe/array/Sync/Music
     embed: yes
-    format: ogg
+    format: opus
     never_convert_lossy_files: no
     formats:
         mp3:
