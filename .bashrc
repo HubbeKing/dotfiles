@@ -12,6 +12,6 @@ alias weechat='mosh hubbe.club -- /home/hubbe/scripts/weechat.sh'
 alias workon='mv /home/hubbe/.ssh/work_config /home/hubbe/.ssh/config'
 alias workoff='mv /home/hubbe/.ssh/config /home/hubbe/.ssh/work_config'
 
-export SOPS_PGP_FP="936E0D27CC44F2E780AD4397CC2FB121243FEF14"
+export SOPS_PGP_FP="74B91EB9898B2ADB9A9E488A7C60FBD151BFFC9E"
 
 PS1='[\u@\h \W]\$ '
