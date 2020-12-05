@@ -1,4 +1,4 @@
-plugins: badfiles convert edit fetchart mbsync missing scrub replaygain
+plugins: badfiles convert edit fetchart mbsync missing scrub replaygain zero
 directory: /mnt/hubbe/array/Music
 library: /mnt/hubbe/array/Music/library.blb
 art_filename: folder
@@ -23,10 +23,10 @@ convert:
             command: ffmpeg -i $source -c:a libopus -b:a 64k -af aresample=resampler=soxr -ar 48000 -vn $dest
             extension: ogg
 
-asciify_paths: yes    
+asciify_paths: yes
 paths:
     default: $albumartist/$original_year-$album%aunique{}/$disc.$track - $title
-        
+
 import:
     write: yes
     copy: yes
@@ -38,7 +38,7 @@ import:
 
 fetchart:
     auto: yes
-    
+
 replaygain:
     auto: yes
     backend: gstreamer
@@ -57,3 +57,8 @@ replace:
     '[\xF8]': o
     '\.$': _
     '\s+$': ''
+
+zero:
+    auto: yes
+    fields: comments
+    update_database: true
