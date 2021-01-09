@@ -20,7 +20,7 @@ convert:
             command: ffmpeg -i $source -c:a libvorbis -aq 4 -af aresample=resampler=soxr -ar 44100 -vn $dest
             extension: ogg
         opus:
-            command: ffmpeg -i $source -c:a libopus -b:a 64k -af aresample=resampler=soxr -ar 48000 -vn $dest
+            command: ffmpeg -i $source -c:a libopus -b:a 96k -af aresample=resampler=soxr -ar 48000 -vn $dest
             extension: ogg
 
 asciify_paths: yes
