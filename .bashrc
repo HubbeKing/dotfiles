@@ -16,3 +16,14 @@ export SOPS_PGP_FP="74B91EB9898B2ADB9A9E488A7C60FBD151BFFC9E"
 export PATH="$(go env GOPATH)/bin:${PATH}"
 
 PS1='[\u@\h \W]\$ '
+
+# source nvm if nvm installed
+if [ -f /usr/share/nvm/init-nvm.sh ]; then
+    source /usr/share/nvm/init-nvm.sh
+fi
+
+# source completions that may or may not exist
+for f in .bashrc.*
+do
+    source $f
+done

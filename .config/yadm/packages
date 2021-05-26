@@ -10,7 +10,9 @@ gst-plugins-good
 gst-plugins-ugly
 gst-libav
 imagemagick
+kind-bin
 kitty
+kubectl-bin
 mosh
 mpc
 mpv
