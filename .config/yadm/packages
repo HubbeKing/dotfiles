@@ -5,6 +5,7 @@ beets
 docker
 docker-compose
 ffmpeg
+go
 gst-plugins-bad
 gst-plugins-good
 gst-plugins-ugly
