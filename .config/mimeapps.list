@@ -2,6 +2,7 @@
 application/json=org.kde.kate.desktop;
 application/octet-stream=visual-studio-code.desktop;
 application/rss+xml=org.kde.kate.desktop;
+application/x-compressed-tar=org.kde.ark.desktop;
 application/x-msdos-program=org.kde.kate.desktop;
 application/x-remmina=org.remmina.Remmina.desktop;
 application/xml=visual-studio-code.desktop;
@@ -22,9 +23,12 @@ x-scheme-handler/rdp=org.remmina.Remmina.desktop;
 x-scheme-handler/remmina=org.remmina.Remmina.desktop;
 x-scheme-handler/spice=org.remmina.Remmina.desktop;
 x-scheme-handler/vnc=org.remmina.Remmina.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+application/pdf=okularApplication_pdf.desktop;
 
 [Default Applications]
 application/json=org.kde.kate.desktop;
+application/x-compressed-tar=org.kde.ark.desktop;
 application/x-remmina=org.remmina.Remmina.desktop
 application/xml=visual-studio-code.desktop;
 inode/directory=org.kde.dolphin.desktop;
