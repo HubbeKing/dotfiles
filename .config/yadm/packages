@@ -2,6 +2,7 @@ adobe-source-code-pro-fonts
 atomicparsley
 bash-completion
 beets
+buildah
 docker
 docker-compose
 ffmpeg
@@ -25,6 +26,7 @@ noto-fonts-emoji
 nvm
 pbzip2
 pigz
+podman
 python-pycryptodome
 reflector
 rtmpdump
