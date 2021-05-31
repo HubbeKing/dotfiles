@@ -40,6 +40,8 @@ pbzip2
 pigz
 podman
 profile-sync-daemon
+proton-ge-custom-bin
+protontricks
 python-pycryptodome
 qemu
 qemu-arch-extra
@@ -52,8 +54,16 @@ rsync
 samba
 slack-desktop
 spice-gtk
+steam
+steam-native-runtime
 streamlink
+vkd3d
 virt-manager
+wine
+wine-gecko
+wine-mono
+wine-mono-gecko-version-fix
+winetricks
 xclip
 xdotool
 youtube-dl
