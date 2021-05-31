@@ -8,6 +8,7 @@ buildah
 dnsmasq
 docker
 docker-compose
+edk2-ovmf
 ffmpeg
 firejail
 freerdp
