@@ -1,4 +1,5 @@
 adobe-source-code-pro-fonts
+apparmor
 atomicparsley
 bash-completion
 beets
@@ -8,6 +9,7 @@ dnsmasq
 docker
 docker-compose
 ffmpeg
+firejail
 freerdp
 fuse-overlayfs
 glib2
@@ -55,3 +57,5 @@ virt-manager
 xclip
 xdotool
 youtube-dl
+zoom
+zoom-firejail
