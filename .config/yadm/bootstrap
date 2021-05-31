@@ -11,3 +11,23 @@ fi
 
 # install things that need to exist not to break configs
 pikaur -Syu --needed --noconfirm - < ~/.config/yadm/packages
+
+# add hubbe user to useful usergroups
+# adm,plugdev,input,wheel for easy access to inputs and general "admin" stuff
+# kvm,libvirt for libvirt KVM virtualization
+# audio,realtime for real-time audio privileges
+sudo usermod -aG adm,audio,input,kvm,libvirt,plugdev,realtime,wheel hubbe
+
+# set up libvirt & virt-manager for KVM virtualization
+sudo systemctl enable --now libvirtd.service
+sudo systemctl start virtlogd.service
+
+# set up rootless buildah & rootless podman
+echo "kernel.unprivileged_userns_clone = 1" | sudo tee /etc/sysctl.d/10-rootless-podman.conf
+sudo sysctl --system > /dev/null
+sudo touch /etc/subuid /etc/subgid
+sudo usermod --add-subuids 100000-165536 --add-subgids 100000-165536 hubbe
+
+# enable profile-sync-daemon for firefox tmpfs profile sync
+echo "hubbe ALL=(ALL:ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo tee /etc/sudoers.d/hubbe
+systemctl user enable --now psd.service
