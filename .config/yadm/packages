@@ -8,6 +8,7 @@ dnsmasq
 docker
 docker-compose
 ffmpeg
+freerdp
 fuse-overlayfs
 glib2
 go
@@ -21,7 +22,9 @@ kind-bin
 kitty
 kubectl-bin
 libfido2
+libsecret
 libvirt
+libvncserver
 mosh
 mpc
 mpv
@@ -40,11 +43,13 @@ qemu
 qemu-arch-extra
 realtime-privileges
 reflector
+remmina
 rtmpdump
 rtkit
 rsync
 samba
 slack-desktop
+spice-gtk
 streamlink
 virt-manager
 xclip
