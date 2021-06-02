@@ -20,7 +20,8 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # adm,input,wheel for easy access to inputs and general "admin" stuff
 # kvm,libvirt for libvirt KVM virtualization
 # audio,realtime for real-time audio privileges
-sudo usermod -aG adm,audio,input,kvm,libvirt,realtime,wheel $USER
+# adbusers for android debug bridge access
+sudo usermod -aG adbusers,adm,audio,input,kvm,libvirt,realtime,wheel $USER
 
 # set up libvirt & virt-manager for KVM virtualization
 sudo systemctl enable --now libvirtd.service
