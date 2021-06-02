@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # ensure pikaur AUR helper is installed
 if ! which pikaur; then
