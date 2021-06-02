@@ -1,5 +1,8 @@
 adobe-source-code-pro-fonts
 apparmor
+android-bash-completion
+android-tools
+android-udev
 atomicparsley
 bash-completion
 beets
@@ -21,6 +24,7 @@ gst-plugins-ugly
 gst-libav
 imagemagick
 iptables-nft
+jdk-openjdk
 kind-bin
 kitty
 kubectl-bin
@@ -61,6 +65,7 @@ steam-native-runtime
 streamlink
 vkd3d
 virt-manager
+visual-studio-code-bin
 wine
 wine-gecko
 wine-mono
