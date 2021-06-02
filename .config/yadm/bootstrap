@@ -23,6 +23,10 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 # adbusers for android debug bridge access
 sudo usermod -aG adbusers,adm,audio,input,kvm,libvirt,realtime,wheel $USER
 
+# work around host-passthrough KVM bluescreen in win10 versions >=1803
+echo "options kvm ignore_msrs=1" | sudo tee /etc/modprobe.d/kvm.conf
+echo "options kvm report_ignored_msrs=0" | sudo tee -a /etc/modprobe.d/kvm.conf
+
 # set up libvirt & virt-manager for KVM virtualization
 sudo systemctl enable --now libvirtd.service
 sudo systemctl start virtlogd.service
