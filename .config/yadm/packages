@@ -42,6 +42,7 @@ kubectl-bin
 libfido2
 libreoffice-fresh
 libsecret
+libva-utils
 libvirt
 libvncserver
 linux-headers
@@ -83,6 +84,7 @@ steam
 steam-native-runtime
 streamlink
 v4l2loopback-dkms
+vdpauinfo
 vkd3d
 virt-manager
 visual-studio-code-bin
