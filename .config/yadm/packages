@@ -12,6 +12,7 @@ buildah
 chromium
 dnsmasq
 discord
+dkms
 docker
 docker-compose
 dolphin
@@ -43,6 +44,7 @@ libreoffice-fresh
 libsecret
 libvirt
 libvncserver
+linux-headers
 meld
 mosh
 mpc
@@ -53,6 +55,7 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 nvm
+obs-studio
 okular
 packagekit-qt5
 pbzip2
@@ -79,6 +82,7 @@ spice-gtk
 steam
 steam-native-runtime
 streamlink
+v4l2loopback-dkms
 vkd3d
 virt-manager
 visual-studio-code-bin
