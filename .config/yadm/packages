@@ -11,6 +11,7 @@ bind
 bridge-utils
 buildah
 chromium
+clang
 dnsmasq
 discord
 dkms
@@ -35,6 +36,7 @@ imagemagick
 insomnia-bin
 iptables-nft
 jdk-openjdk
+kate
 kde-cli-tools
 kdegraphics-thumbnailers
 kind-bin
@@ -74,15 +76,17 @@ python2
 python36
 python37
 python38
+python-language-server
 python-pycryptodome
 qemu
 qemu-arch-extra
 realtime-privileges
 reflector
 remmina
+rsync
 rtmpdump
 rtkit
-rsync
+rust
 samba
 sc-controller
 slack-desktop
@@ -91,6 +95,7 @@ spice-gtk
 steam
 steam-native-runtime
 streamlink
+texlab
 unarchiver
 unrar
 v4l2loopback-dkms
