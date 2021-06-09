@@ -9,6 +9,7 @@ bash-completion
 beets
 bind
 bridge-utils
+btrfs-progs
 buildah
 chromium
 clang
@@ -18,7 +19,10 @@ dkms
 docker
 docker-compose
 dolphin
+e2fsprogs
 edk2-ovmf
+exfatprogs
+f2fs-tools
 ffmpeg
 ffmpegthumbs
 firejail
@@ -27,6 +31,8 @@ freerdp
 fuse-overlayfs
 glib2
 go
+gpart
+gparted
 gst-plugins-bad
 gst-plugins-good
 gst-plugins-ugly
@@ -36,6 +42,7 @@ imagemagick
 insomnia-bin
 iptables-nft
 jdk-openjdk
+jfsutils
 kate
 kde-cli-tools
 kdegraphics-thumbnailers
@@ -55,11 +62,14 @@ meld
 mosh
 mpc
 mpv
+mtools
 nano-syntax-highlighting
 ncmpcpp
+nilfs-utils
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+ntfs-3g
 nvm
 obs-studio
 okular
@@ -68,6 +78,7 @@ packagekit-qt5
 pbzip2
 pigz
 podman
+polkit
 profile-sync-daemon
 proton-ge-custom-bin
 protontricks
@@ -83,6 +94,7 @@ qemu-arch-extra
 realtime-privileges
 reflector
 remmina
+reiserfsprogs
 rsync
 rtmpdump
 rtkit
@@ -96,6 +108,7 @@ steam
 steam-native-runtime
 streamlink
 texlab
+udftools
 unarchiver
 unrar
 v4l2loopback-dkms
@@ -108,8 +121,10 @@ wine-gecko
 wine-mono
 wine-mono-gecko-version-fix
 winetricks
+xfsprogs
 xclip
 xdotool
+xorg-xhost
 youtube-dl
 zoom
 zoom-firejail
