@@ -3,6 +3,7 @@ apparmor
 android-bash-completion
 android-tools
 android-udev
+ark
 atomicparsley
 bash-completion
 beets
@@ -46,6 +47,8 @@ libva-utils
 libvirt
 libvncserver
 linux-headers
+lrzip
+lzop
 meld
 mosh
 mpc
@@ -58,6 +61,7 @@ noto-fonts-emoji
 nvm
 obs-studio
 okular
+p7zip
 packagekit-qt5
 pbzip2
 pigz
@@ -83,6 +87,8 @@ spice-gtk
 steam
 steam-native-runtime
 streamlink
+unarchiver
+unrar
 v4l2loopback-dkms
 vdpauinfo
 vkd3d
