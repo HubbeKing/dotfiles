@@ -41,3 +41,6 @@ sudo usermod --add-subuids 100000-165536 --add-subgids 100000-165536 $USER
 # enable profile-sync-daemon for firefox tmpfs profile sync
 echo "$USER ALL=(ALL:ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo tee /etc/sudoers.d/$USER
 systemctl --user enable --now psd.service
+
+# install flatpaks
+sudo flatpak install -y --or-update us.zoom.Zoom com.jetbrains.PyCharm-Community com.jetbrains.PyCharm.Extensions.Python2-7 com.jetbrains.PyCharm-Professional

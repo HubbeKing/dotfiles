@@ -27,6 +27,7 @@ ffmpeg
 ffmpegthumbs
 firejail
 firefox
+flatpak
 freerdp
 fuse-overlayfs
 glib2
@@ -126,5 +127,3 @@ xclip
 xdotool
 xorg-xhost
 youtube-dl
-zoom
-zoom-firejail

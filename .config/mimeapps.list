@@ -46,6 +46,3 @@ x-scheme-handler/sidequest=SideQuest.desktop
 x-scheme-handler/spice=org.remmina.Remmina.desktop
 x-scheme-handler/vnc=org.remmina.Remmina.desktop
 x-scheme-handler/slack=slack.desktop
-x-scheme-handler/zoommtg=ZoomFirejail.desktop
-x-scheme-handler/zoomus=ZoomFirejail.desktop
-x-scheme-handler/zoomphonecall=ZoomFirejail.desktop

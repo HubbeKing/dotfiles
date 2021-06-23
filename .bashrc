@@ -19,13 +19,16 @@ export PATH="$(go env GOPATH)/bin:${PATH}"
 
 PS1='[\u@\h \W]\$ '
 
+# set XDG_DATA_DIRS for flatpak
+export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share:${XDG_DATA_DIRS}"
+
 # source nvm if nvm installed
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
     source /usr/share/nvm/init-nvm.sh
 fi
 
 # source completions that may or may not exist
-for f in .bashrc.*
+for f in ~/.bashrc.*
 do
     source $f
 done
