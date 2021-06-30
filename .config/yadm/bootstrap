@@ -48,9 +48,3 @@ sudo mkdir -p /etc/pacman.d/hooks
 sudo cp ~/.config/yadm/scripts/firejail.hook /etc/pacman.d/hooks/firejail.hook  # run firecfg as pacman hook
 sudo sed -i 's|# browser-allow-drm no|browser-allow-drm yes|' /etc/firejail/firejail.config  # enable DRM in browsers (netflix and such)
 sudo sed -i 's|# browser-disable-u2f yes|browser-disable-u2f no|' /etc/firejail/firejail.config  # enable u2f in browsers
-
-# install flatpaks
-sudo flatpak install -y --or-update us.zoom.Zoom
-
-# harden zoom flatpak sandbox further
-sudo flatpak override --no-talk-name=org.gnome.Shell --no-talk-name="org.kde.*" --no-talk-name=org.freedesktop.ScreenSaver us.zoom.Zoom
