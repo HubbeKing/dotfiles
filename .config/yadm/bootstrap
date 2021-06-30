@@ -46,4 +46,4 @@ systemctl --user enable --now psd.service
 sudo flatpak install -y --or-update us.zoom.Zoom
 
 # harden zoom flatpak sandbox further
-sudo flatpak override --no-talk-name=org.gnome.Shell --no-talk-name="org.kde.*" us.zoom.Zoom
+sudo flatpak override --no-talk-name=org.gnome.Shell --no-talk-name="org.kde.*" --no-talk-name=org.freedesktop.ScreenSaver us.zoom.Zoom
