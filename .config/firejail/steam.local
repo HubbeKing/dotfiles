@@ -1,0 +1,25 @@
+# nvidia fixing
+ignore nogroups
+ignore noroot
+
+# VR fix
+ignore novideo
+
+# seccomp is buggy, see #2951 and #3267
+ignore seccomp
+
+# controller support
+ignore private-dev
+
+# obscure games break on private-etc
+ignore private-etc
+
+# allow access to saves dirs and SteamLibrary
+noblacklist ${HOME}/Documents
+noblacklist ${HOME}/SteamLibrary
+whitelist ${HOME}/Documents
+whitelist ${HOME}/SteamLibrary
+
+# proton-ge-custom-bin fix
+noblacklist /usr/share/steam
+whitelist /usr/share/steam
