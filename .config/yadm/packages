@@ -57,6 +57,7 @@ libva-utils
 libvirt
 libvncserver
 linux-headers
+lith-git
 lrzip
 lzop
 meld
