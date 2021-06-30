@@ -1,9 +1,0 @@
-include chromium-common-hardened.inc
-whitelist ${HOME}/Documents
-whitelist ${HOME}/Downloads
-whitelist ${HOME}/Music
-whitelist ${HOME}/Notes
-whitelist ${HOME}/Pictures
-whitelist ${HOME}/Projects
-whitelist ${HOME}/Scripts
-whitelist ${HOME}/Videos

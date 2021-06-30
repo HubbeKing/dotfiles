@@ -1,7 +1,0 @@
-# native system notifications
-dbus-user.talk org.freedesktop.Notifications
-
-# plasma browser integration
-dbus-user.own org.mpris.MediaPlayer2.plasma-browser-integration
-dbus-user.talk org.kde.JobViewServer
-dbus-user.talk org.kde.kuiserver
