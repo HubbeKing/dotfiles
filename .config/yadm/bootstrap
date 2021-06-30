@@ -43,4 +43,7 @@ echo "$USER ALL=(ALL:ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo tee /etc
 systemctl --user enable --now psd.service
 
 # install flatpaks
-sudo flatpak install -y --or-update us.zoom.Zoom com.jetbrains.PyCharm-Community com.jetbrains.PyCharm.Extensions.Python2-7 com.jetbrains.PyCharm-Professional
+sudo flatpak install -y --or-update us.zoom.Zoom
+
+# harden zoom flatpak sandbox further
+sudo flatpak override --no-talk-name=org.gnome.Shell --no-talk-name="org.kde.*" us.zoom.Zoom
