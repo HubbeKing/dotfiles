@@ -43,10 +43,8 @@ echo "$USER ALL=(ALL:ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo tee /etc
 systemctl --user enable --now psd.service
 
 # set up zoom sandboxing using firejail
-sudo mkdir -p /opt/zoom/home
-sudo chown -R ${USER} /opt/zoom
 cat <<EOF | sudo tee /usr/local/bin/zoom
 #!/bin/bash
-firejail --profile=/etc/firejail/zoom.profile --private=/opt/zoom/home /opt/zoom/ZoomLauncher
+firejail --profile=/etc/firejail/zoom.profile /opt/zoom/ZoomLauncher $@
 EOF
 sudo chmod +x /usr/local/bin/zoom

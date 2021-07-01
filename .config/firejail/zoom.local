@@ -1,0 +1,4 @@
+# allow zoom to open firefox for SSO login and to open on-prem settings webpage
+noblacklist ${HOME}/.mozilla
+whitelist ${HOME}/.mozilla/firefox/profiles.ini
+read-only ${HOME}/.mozilla/firefox/profiles.ini
