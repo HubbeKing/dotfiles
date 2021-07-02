@@ -1,0 +1,11 @@
+[Desktop Entry]
+Categories=Development;
+Comment=
+Exec=/opt/pycharm-community/bin/pycharm.sh
+GenericName=Jetbrains Python IDE
+Icon=/opt/pycharm-community/bin/pycharm.svg
+Name=PyCharm Community Edition
+StartupVMClass=pycharm
+Terminal=false
+Type=Application
+Version=1.0

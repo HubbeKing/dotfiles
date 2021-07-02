@@ -1,0 +1,11 @@
+[Desktop Entry]
+Categories=Development;
+Comment=
+Exec=/opt/pycharm-professional/bin/pycharm.sh
+GenericName=Jetbrains Python IDE
+Icon=/opt/pycharm-professional/bin/pycharm.svg
+Name=PyCharm Professional Edition
+StartupVMClass=pycharm
+Terminal=false
+Type=Application
+Version=1.0
