@@ -11,6 +11,8 @@ bind
 bridge-utils
 btrfs-progs
 buildah
+cadbus-deb
+chiaki
 chromium
 clang
 dnsmasq
@@ -68,6 +70,7 @@ mtools
 nano-syntax-highlighting
 ncmpcpp
 nilfs-utils
+noise-suppression-for-voice
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
