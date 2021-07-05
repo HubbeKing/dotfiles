@@ -15,6 +15,7 @@ cadbus-deb
 chiaki
 chromium
 clang
+cython
 dnsmasq
 discord
 dkms
@@ -46,6 +47,7 @@ insomnia-bin
 iptables-nft
 jdk-openjdk
 jfsutils
+jupyter
 kate
 kde-cli-tools
 kdegraphics-thumbnailers
@@ -88,12 +90,16 @@ profile-sync-daemon
 proton-ge-custom-bin
 protontricks
 purpose
+pycharm-community-jre
 python2
 python36
 python37
 python38
+python-coverage
 python-language-server
 python-pycryptodome
+python-pytest
+python-tox
 qemu
 qemu-arch-extra
 realtime-privileges
