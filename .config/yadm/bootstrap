@@ -16,11 +16,17 @@ pikaur -Syu --needed --noconfirm - < ~/.config/yadm/packages
 # set up clamav
 # fetch virus definitions
 sudo freshclam
-# exclude NFS share from automatic scans
-echo "ExcludePath ^/mnt/hubbe/array" | sudo tee -a /etc/clamav/clamd.conf
+# set up OnAccessScan
+cat ~/.config/yadm/clamav/config | sudo tee -a /etc/clamav/clamd.conf
+sudo cp ~/.config/yadm/clamav/virus-event.bash /etc/clamav/
+sudo chmod +x /etc/clamav/virus-event.bash
+# set clamd to run as root (required for OnAccessScan)
+sudo sed -i 's|User clamav|User root|' /etc/clamav/clamd.conf
+sudo aa-complain clamd
 # enable services
 sudo systemctl enable --now clamav-freshclam.service
 sudo systemctl enable --now clamav-daemon.service
+sudo systemctl enable --now clamav-clamonacc.service
 
 # set up apparmor (for increased security with firejail)
 sudo sed -i  's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINUX_LINUX="lsm=lockdown,yama,apparmor,bpf"/' /etc/default/grub
