@@ -14,7 +14,7 @@ alias weechat='kubectl exec -it deployments/weechat -c weechat -- tmux attach'
 alias workon='mv /home/hubbe/.ssh/work_config /home/hubbe/.ssh/config'
 alias workoff='mv /home/hubbe/.ssh/config /home/hubbe/.ssh/work_config'
 
-export SOPS_PGP_FP="74B91EB9898B2ADB9A9E488A7C60FBD151BFFC9E"
+export SOPS_AGE_RECIPIENTS="age1j80wssnp7v6kxuga65pua3utmza4y50w243sntfyncynhp6fwpuqxkx7lc"
 export PATH="$(go env GOPATH)/bin:${PATH}"
 
 PS1='[\u@\h \W]\$ '
