@@ -105,6 +105,7 @@ qemu-arch-extra
 realtime-privileges
 reflector
 remmina
+renameutils
 reiserfsprogs
 rsync
 rtmpdump
