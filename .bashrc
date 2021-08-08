@@ -11,7 +11,7 @@ alias mpc='mpc --host=192.168.1.7'
 alias pacrepo='sudo reflector --country Finland --country Germany --country Sweden --protocol https --age 48 --sort rate --save /etc/pacman.d/mirrorlist'
 alias update-grub='sudo ZPOOL_VDEV_NAME_PATH=1 grub-mkconfig -o /boot/grub/grub.cfg'
 alias virsh='virsh -c qemu:///system'
-alias weechat='kubectl exec -it deployments/weechat -c weechat -- tmux attach'
+alias weechat='kubectl exec -it deployments/weechat -c weechat -- ./attach.sh'
 alias workon='mv /home/hubbe/.ssh/work_config /home/hubbe/.ssh/config'
 alias workoff='mv /home/hubbe/.ssh/config /home/hubbe/.ssh/work_config'
 
