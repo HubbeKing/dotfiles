@@ -23,6 +23,9 @@ x-scheme-handler/rdp=org.remmina.Remmina.desktop;
 x-scheme-handler/remmina=org.remmina.Remmina.desktop;
 x-scheme-handler/spice=org.remmina.Remmina.desktop;
 x-scheme-handler/vnc=org.remmina.Remmina.desktop;
+x-scheme-handler/zoommtg=Zoom.desktop;
+x-scheme-handler/zoomus=Zoom.desktop;
+x-scheme-handler/zoomphonecall=Zoom.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 application/pdf=okularApplication_pdf.desktop;
 
@@ -46,3 +49,4 @@ x-scheme-handler/sidequest=SideQuest.desktop
 x-scheme-handler/spice=org.remmina.Remmina.desktop
 x-scheme-handler/vnc=org.remmina.Remmina.desktop
 x-scheme-handler/slack=slack.desktop
+x-scheme-handler/discord-443564201349218305=discord-443564201349218305.desktop

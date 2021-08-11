@@ -1,0 +1,25 @@
+[Desktop Entry]
+Categories=Network;Application;
+Comment[en_GB]=Zoom Video Conference
+Comment=Zoom Video Conference
+Encoding=UTF-8
+Exec=zoom %U
+GenericName[en_GB]=
+GenericName=
+Icon=Zoom
+MimeType=application/x-zoom;
+Name[en_GB]=Zoom
+Name=Zoom
+Name[en_US]=Zoom
+Path=
+StartupNotify=true
+StartupWMClass=zoom
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+MimeType=x-scheme-handler/zoommtg;x-scheme-handler/zoomus;x-scheme-handler/tel;x-scheme-handler/callto;x-scheme-handler/zoomphonecall;
+X-KDE-Protocols=zoommtg;zoomus;tel;callto;zoomphonecall;
+X-KDE-SubstituteUID=false
+X-KDE-Username=
