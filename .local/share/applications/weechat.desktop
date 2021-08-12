@@ -1,10 +1,8 @@
 [Desktop Entry]
 Categories=Network
-Comment[en_GB]=
-Comment=
-Exec=/usr/bin/kitty kubectl exec -it deployments/weechat -c weechat -- ./attach.sh
-GenericName[en_GB]=
-GenericName=tmux attach to weechat
+Comment=Attach to weechat tui running in k8s pod
+Exec=kitty -T Weechat kubectl exec -it deployments/weechat -c weechat -- ./attach.sh
+GenericName=Weechat TUI Attach
 Icon=/home/hubbe/Pictures/Weechat_logo.png
 MimeType=
 Name=Weechat
