@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/hubbe/Scripts/load_pa_tcp_module.sh
+Icon=dialog-scripts
+Name=load_pa_tcp_module.sh
+Path=
+Type=Application
+X-KDE-AutostartScript=true
