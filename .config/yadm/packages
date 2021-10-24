@@ -142,4 +142,5 @@ xfsprogs
 xclip
 xdotool
 xorg-xhost
-youtube-dl
+yt-dlp
+yt-dlp-drop-in
