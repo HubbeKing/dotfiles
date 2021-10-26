@@ -106,6 +106,7 @@ python-tox
 qemu
 qemu-arch-extra
 realtime-privileges
+rebuild-detector
 reflector
 remmina
 renameutils
