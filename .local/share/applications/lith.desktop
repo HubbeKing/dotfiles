@@ -1,21 +1,10 @@
 [Desktop Entry]
-Categories=Network
-Comment[en_GB]=
-Comment=
+Categories=Network;Chat
 Exec=/usr/bin/lith
-GenericName[en_GB]=
-GenericName=Weechat Relay Client
-Icon=/home/hubbe/Pictures/Weechat_logo.png
-MimeType=
-Name[en_GB]=Lith
+Icon=weechat
 Name=Lith
-Path=
+Comment=Multiplatform WeeChat Relay Client
 StartupNotify=true
 Terminal=false
-TerminalOptions=
 Type=Application
 Version=1.0
-X-DBUS-ServiceName=
-X-DBUS-StartupType=
-X-KDE-SubstituteUID=false
-X-KDE-Username=
