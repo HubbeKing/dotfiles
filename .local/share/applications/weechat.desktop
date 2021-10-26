@@ -1,11 +1,10 @@
 [Desktop Entry]
-Categories=Network
+Categories=Network;Chat
 Comment=Attach to weechat tui running in k8s pod
 Exec=kitty -T Weechat kubectl exec -it deployments/weechat -c weechat -- ./attach.sh
 GenericName=Weechat TUI Attach
-Icon=/home/hubbe/Pictures/Weechat_logo.png
-MiniIcon=/home/hubbe/Pictures/Weechat_logo.png
+Icon=weechat
+MiniIcon=weechat
 Name=Weechat
-Path=/home/hubbe
 Terminal=false
 Type=Application
