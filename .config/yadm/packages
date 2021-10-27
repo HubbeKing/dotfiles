@@ -26,7 +26,7 @@ docker-compose
 dolphin
 e2fsprogs
 edk2-ovmf
-exfatprogs
+exfat-utils
 f2fs-tools
 ffmpeg
 ffmpegthumbs
