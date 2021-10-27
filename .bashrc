@@ -14,8 +14,6 @@ alias pacrepo='sudo reflector --country Finland --country Germany --country Swed
 alias usage='sudo btrfs filesystem usage /'
 alias virsh='virsh -c qemu:///system'
 alias weechat='kubectl exec -it deployments/weechat -c weechat -- ./attach.sh'
-alias workon='mv /home/hubbe/.ssh/work_config /home/hubbe/.ssh/config'
-alias workoff='mv /home/hubbe/.ssh/config /home/hubbe/.ssh/work_config'
 
 export SOPS_AGE_RECIPIENTS="age1j80wssnp7v6kxuga65pua3utmza4y50w243sntfyncynhp6fwpuqxkx7lc"
 export PATH="$(go env GOPATH)/bin:${PATH}"
