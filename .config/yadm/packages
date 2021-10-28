@@ -3,6 +3,7 @@ apparmor
 android-bash-completion
 android-tools
 android-udev
+anything-sync-daemon
 ark
 atomicparsley
 bash-completion
