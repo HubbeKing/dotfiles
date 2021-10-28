@@ -55,9 +55,8 @@ kate
 kde-cli-tools
 kdegraphics-thumbnailers
 kdenlive
-kind-bin
 kitty
-kubectl-bin
+kubectl
 kwave
 libfido2
 libreoffice-fresh
@@ -70,6 +69,7 @@ lith-git
 lrzip
 lzop
 meld
+minikube
 mosh
 mpc
 mpv
