@@ -55,6 +55,7 @@ kate
 kde-cli-tools
 kdegraphics-thumbnailers
 kdenlive
+kimageformats
 kitty
 kubectl
 kwave
@@ -106,6 +107,7 @@ python-pytest
 python-tox
 qemu
 qemu-arch-extra
+qt5-imageformats
 realtime-privileges
 rebuild-detector
 reflector
