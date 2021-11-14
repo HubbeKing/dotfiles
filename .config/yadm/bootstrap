@@ -36,12 +36,3 @@ echo "kernel.unprivileged_userns_clone = 1" | sudo tee /etc/sysctl.d/10-rootless
 sudo sysctl --system > /dev/null
 sudo touch /etc/subuid /etc/subgid
 sudo usermod --add-subuids 100000-165536 --add-subgids 100000-165536 $USER
-
-# enable profile-sync-daemon for firefox tmpfs profile sync
-echo "$USER ALL=(ALL:ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo tee /etc/sudoers.d/$USER
-systemctl --user enable --now psd.service
-
-# enable anything-sync-daemon for firefox tmpfs cache sync
-sudo sed -i "s|WHATTOSYNC=()|WHATTOSYNC=('/home/hubbe/.cache/mozilla/firefox')|" /etc/asd.conf
-sudo sed -i 's|#USE_OVERLAYFS="no"|USE_OVERLAYFS="yes"|' /etc/asd.conf
-sudo systemctl enable --now asd.service

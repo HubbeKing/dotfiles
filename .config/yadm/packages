@@ -3,7 +3,6 @@ apparmor
 android-bash-completion
 android-tools
 android-udev
-anything-sync-daemon
 ark
 atomicparsley
 bash-completion
@@ -91,7 +90,6 @@ pbzip2
 pigz
 podman
 polkit
-profile-sync-daemon
 proton-ge-custom-bin
 protontricks
 purpose
