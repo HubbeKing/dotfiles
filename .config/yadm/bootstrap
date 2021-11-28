@@ -10,6 +10,9 @@ if ! which pikaur; then
     makepkg -fsri --noconfirm
 fi
 
+# set up additional arch user repositories
+cat ~/.config/yadm/repos | sudo tee -a /etc/pacman.conf
+
 # install things that need to exist not to break configs
 pikaur -Syu --needed --noconfirm - < ~/.config/yadm/packages
 
