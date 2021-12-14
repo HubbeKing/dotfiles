@@ -89,6 +89,7 @@ packagekit-qt5
 pbzip2
 pigz
 podman
+podman-compose
 polkit
 proton-ge-custom-bin
 protontricks
@@ -98,6 +99,7 @@ python2
 python36
 python37
 python38
+python39
 python-coverage
 python-language-server
 python-pycryptodome
