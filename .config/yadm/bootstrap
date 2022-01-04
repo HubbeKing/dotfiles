@@ -10,8 +10,11 @@ if ! which pikaur; then
     makepkg -fsri --noconfirm
 fi
 
-# set up additional arch user repositories
-cat ~/.config/yadm/repos | sudo tee -a /etc/pacman.conf
+# import gpg keys needed for AUR packages
+# python37 / python39
+gpg --recv-keys 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
+# python38 / python39
+gpg --recv-keys E3FF2839C048B25C084DEBE9B26995E310250568
 
 # install things that need to exist not to break configs
 pikaur -Syu --needed --noconfirm - < ~/.config/yadm/packages
