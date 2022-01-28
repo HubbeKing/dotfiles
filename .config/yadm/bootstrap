@@ -1,16 +1,6 @@
 #!/bin/bash
 set -e
 
-# set up git defaults
-# user settings
-git config --global user.name HubbeKing
-git config --global user.email github@hubbe.club
-git config --global init.defaultbranch main
-# merge settings
-git config --global merge.ff only              # default to just fast-forward
-git config --global merge.conflictstyle diff3  # three-way diff on merge conflict
-git config --global pull.rebase true           # default to rebase instead of merge commit
-
 # ensure pikaur AUR helper is installed
 if ! which pikaur; then
     sudo pacman -Syu --needed base-devel git

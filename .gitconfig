@@ -1,0 +1,12 @@
+[user]
+	name = HubbeKing
+	email = github@hubbe.club
+[commit]
+	gpgSign = true
+[init]
+	defaultBranch = main
+[merge]
+	ff = only
+	conflictStyle = diff3
+[pull]
+	rebase = true
