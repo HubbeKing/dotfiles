@@ -16,9 +16,6 @@ buildah
 chiaki
 chromium
 clang
-code
-code-features
-code-marketplace
 compsize
 cython
 discord
@@ -136,6 +133,7 @@ v4l2loopback-dkms
 vdpauinfo
 virt-manager
 virt-viewer
+visual-studio-code-bin
 vkd3d
 weechat
 wine
