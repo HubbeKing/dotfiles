@@ -1,8 +1,6 @@
 [user]
 	name = HubbeKing
 	email = github@hubbe.club
-[commit]
-	gpgSign = true
 [init]
 	defaultBranch = main
 [merge]
