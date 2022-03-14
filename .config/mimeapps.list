@@ -31,6 +31,7 @@ x-scheme-handler/vnc=org.remmina.Remmina.desktop;
 x-scheme-handler/zoommtg=Zoom.desktop;
 x-scheme-handler/zoomphonecall=Zoom.desktop;
 x-scheme-handler/zoomus=Zoom.desktop;
+text/yaml=visual-studio-code.desktop;
 
 [Default Applications]
 application/json=org.kde.kate.desktop;
