@@ -1,6 +1,6 @@
 plugins: badfiles convert edit fetchart mbsync missing scrub replaygain zero
-directory: /mnt/hubbe/array/Music
-library: /mnt/hubbe/array/Music/library.blb
+directory: /mnt/array/Music
+library: /mnt/array/Music/library.blb
 art_filename: folder
 threaded: yes
 original_date: yes
@@ -8,13 +8,13 @@ per_disc_numbering: yes
 
 convert:
     copy_album_art: no
-    dest: /mnt/hubbe/array/Sync/Music
+    dest: ~/Music
     embed: yes
     format: opus
     never_convert_lossy_files: no
     formats:
         mp3:
-            command: /mnt/hubbe/array/Scripts/convert_to_mp3.sh $source $dest
+            command: /mnt/array/Scripts/convert_to_mp3.sh $source $dest
             extension: mp3
         ogg:
             command: ffmpeg -i $source -c:a libvorbis -aq 4 -af aresample=resampler=soxr -ar 44100 -vn $dest
