@@ -15,6 +15,7 @@ alias pacdiff='sudo DIFFPROG=meld pacdiff'
 alias pacrepo='sudo reflector --country Finland --country Germany --country Sweden --protocol https --age 24 --sort rate --number 10 --save /etc/pacman.d/mirrorlist'
 alias usage='sudo btrfs filesystem usage /'
 alias virsh='virsh -c qemu:///system'
+alias vpn='grep password ~/.samba|cut -d"=" -f2|sudo openconnect --config ~/.vpn.conf'
 alias weechat='kubectl exec -it deployments/weechat -c weechat -- ./attach.sh'
 
 export SOPS_AGE_RECIPIENTS="age1j80wssnp7v6kxuga65pua3utmza4y50w243sntfyncynhp6fwpuqxkx7lc"
