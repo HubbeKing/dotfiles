@@ -48,7 +48,6 @@ insomnia-bin
 iptables-nft
 jdk-openjdk
 jfsutils
-jupyter
 kate
 kde-cli-tools
 kdegraphics-thumbnailers
@@ -103,7 +102,7 @@ python-coverage
 python-pycryptodome
 python-pytest
 python-tox
-qemu
+qemu-desktop
 qemu-arch-extra
 qt5-imageformats
 realtime-privileges
@@ -138,7 +137,6 @@ weechat
 wine
 wine-gecko
 wine-mono
-wine-mono-gecko-version-fix
 winetricks
 xclip
 xdotool
