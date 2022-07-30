@@ -139,6 +139,9 @@ wine-gecko
 wine-mono
 winetricks
 xclip
+xdg-desktop-portal
+xdg-desktop-portal-kde
+xdg-desktop-portal-gtk
 xdotool
 xfsprogs
 xorg-xhost
