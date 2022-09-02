@@ -19,8 +19,11 @@ gpg --recv-keys E3FF2839C048B25C084DEBE9B26995E310250568
 # install things that need to exist not to break configs
 pikaur -Syu --needed --noconfirm - < ~/.config/yadm/packages
 
-# set up apparmor (for increased security with firejail)
-sudo sed -i  's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf"/' /etc/default/grub
+# set up config file for grub
+# set up apparmor auto-loading
+sudo cp ~/.config/yadm/grub /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo systemctl enable apparmor.service
 
 # add user to useful usergroups
 # adm,input,wheel for easy access to inputs and general "admin" stuff
@@ -28,10 +31,6 @@ sudo sed -i  's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,
 # audio,realtime for real-time audio privileges
 # adbusers for android debug bridge access
 sudo usermod -aG adbusers,adm,audio,input,kvm,libvirt,realtime,wheel $USER
-
-# work around host-passthrough KVM bluescreen in win10 versions >=1803
-echo "options kvm ignore_msrs=1" | sudo tee /etc/modprobe.d/kvm.conf
-echo "options kvm report_ignored_msrs=0" | sudo tee -a /etc/modprobe.d/kvm.conf
 
 # set up libvirt & virt-manager for KVM virtualization
 sudo systemctl enable --now libvirtd.service
