@@ -3,7 +3,7 @@
 #
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
-alias flash='sudo dd bs=4M conv=fsync oflag=direct status=progress'
+alias flash='sudo dd bs=64k oflag=dsync status=progress'
 alias jdmesg='journalctl --dmesg --output=short-monotonic --no-hostname --pager-end'
 alias ls='ls --color=auto'
 alias mpc='mpc --host=192.168.1.7'
