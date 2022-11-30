@@ -9,14 +9,12 @@ bash-completion
 beets
 bind
 bridge-utils
-btrfs-du
-btrfs-list-git
 btrfs-progs
 buildah
-chiaki
 chromium
 clang
 compsize
+cronie
 cython
 discord
 dkms
@@ -63,7 +61,6 @@ libva-utils
 libvirt
 libvncserver
 linux-headers
-lith-git
 lrzip
 lzop
 meld
@@ -99,6 +96,8 @@ python37
 python38
 python39
 python-coverage
+python-llfuse
+python-pip
 python-pycryptodome
 python-pytest
 python-tox
@@ -116,8 +115,6 @@ rtkit
 rtmpdump
 rust
 samba
-sc-controller
-snapper
 spectacle
 spice-gtk
 steam
@@ -145,6 +142,6 @@ xdg-desktop-portal-gtk
 xdotool
 xfsprogs
 xorg-xhost
-yad
+yad-eos
 yt-dlp
 zenity
