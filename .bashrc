@@ -1,10 +1,6 @@
 #
 # ~/.bashrc
 #
-alias bdf='sudo btrfs filesystem df /'
-alias blist='sudo btrfs-list -s'
-alias cp='cp --reflink=auto'
-alias diskmon='watch -n 1 iostat -xy --human 1 1'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 alias flash='sudo dd bs=4M conv=fsync oflag=direct status=progress'
@@ -12,8 +8,8 @@ alias jdmesg='journalctl --dmesg --output=short-monotonic --no-hostname --pager-
 alias ls='ls --color=auto'
 alias mpc='mpc --host=192.168.1.7'
 alias pacdiff='sudo DIFFPROG=meld pacdiff'
-alias pacrepo='sudo reflector --country Finland --country Germany --country Sweden --protocol https --age 24 --sort rate --number 10 --save /etc/pacman.d/mirrorlist'
-alias usage='sudo btrfs filesystem usage /'
+alias pacrepo='sudo reflector --verbose --country Finland --country Germany --country Sweden --protocol https --age 24 --sort rate --latest 10 --download-timeout 5 --save /etc/pacman.d/mirrorlist'
+alias units='units --verbose'
 alias virsh='virsh -c qemu:///system'
 alias weechat='kubectl exec -it deployments/weechat -c weechat -- ./attach.sh'
 
