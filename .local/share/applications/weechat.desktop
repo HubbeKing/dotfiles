@@ -1,10 +1,21 @@
 [Desktop Entry]
 Categories=Network;Chat
+Comment[en_GB]=Attach to weechat tui running in k8s pod
 Comment=Attach to weechat tui running in k8s pod
-Exec=kitty -T Weechat kubectl exec -it deployments/weechat -c weechat -- ./attach.sh
+Exec=kitty -T Weechat kubectl exec -it deployments/weechat -c weechat -- ./attach.sh -d
+GenericName[en_GB]=Weechat TUI Attach
 GenericName=Weechat TUI Attach
 Icon=weechat
+MimeType=
 MiniIcon=weechat
+Name[en_GB]=Weechat
 Name=Weechat
+Path=
+StartupNotify=true
 Terminal=false
+TerminalOptions=
 Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
