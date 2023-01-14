@@ -2,6 +2,8 @@ adobe-source-code-pro-fonts
 android-bash-completion
 android-tools
 android-udev
+ansible
+ansible-lint
 apparmor
 bash-completion
 beets
@@ -40,6 +42,7 @@ insomnia-bin
 iptables-nft
 jdk-openjdk
 jfsutils
+kitty
 kubectl
 libfido2
 libreoffice-fresh
@@ -95,6 +98,7 @@ rtkit
 rtmpdump
 rust
 samba
+sops
 spice-gtk
 steam
 steam-native-runtime
