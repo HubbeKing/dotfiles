@@ -1,24 +1,29 @@
 #!/bin/bash
 set -e
 
-PS3='Please choose GPU type for hardware video acceleration (VAAPI)'
-options=("AMD", "Nvidia", "Intel")
+PS3='Please choose system GPU type: '
+options=("AMD" "Nvidia" "Intel")
 select gpu in "${options[@]}"
 do
-    case $gpu in
-        "AMD")
-            $vaapi="libva-mesa-driver mesa-vdpau lib32-libva-mesa-driver lib32-mesa-vdpau"
-            $vulkan="vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader"
+    case "$REPLY" in
+        "1")
+            vaapi="libva-mesa-driver mesa-vdpau lib32-libva-mesa-driver lib32-mesa-vdpau"
+            vulkan="vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader"
+            break
             ;;
-        "Nvidia")
-            $vaapi="nvidia-utils lib32-nvidia-utils"
-            $vulkan="vulkan-icd-loader lib32-vulkan-icd-loader"
+        "2")
+            vaapi="nvidia-utils lib32-nvidia-utils"
+            vulkan="vulkan-icd-loader lib32-vulkan-icd-loader"
+            break
             ;;
-        "Intel")
-            $vaapi="intel-media-driver linux-firmware"
-            $vulkan="vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader"
+        "3")
+            vaapi="intel-media-driver linux-firmware"
+            vulkan="vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader"
+            break
             ;;
-        *) echo "Invalid option $REPLY";;
+        *)
+            echo "Invalid option."
+            exit 1
     esac
 done
 
@@ -35,10 +40,11 @@ fi
 # set up chaotic-aur
 sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key FBA220DFC880C036
-sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo pacman -U --needed 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+# TODO: only add this config if it's not already there
 sudo tee -a /etc/pacman.conf > /dev/null <<EOT
 [chaotic-aur]
-Include = /etc/pacman.d/chaotic-mirrorlist 
+Include = /etc/pacman.d/chaotic-mirrorlist
 EOT
 pikaur -Sy
 
@@ -46,7 +52,7 @@ pikaur -Sy
 pikaur -Syu --needed $vaapi $vulkan
 
 # install packages
-$pkglist = $(cat ~/.config/yadm/packages)
+pkglist=$(cat ~/.config/yadm/packages)
 pikaur -Syu --needed $pkglist
 
 # set up apparmor auto-loading
