@@ -1,6 +1,0 @@
-{
- "default.profile.alsa_card.usb-MACROSILICON_USB_Video-02": { "name": "input:iec958-stereo" },
- "default.profile.alsa_card.pci-0000_08_00.1": { "name": "off" },
- "default.profile.alsa_card.usb-046d_HD_Pro_Webcam_C920_3750DABF-02": { "name": "input:iec958-stereo" },
- "default.profile.alsa_card.pci-0000_0a_00.4": { "name": "off" }
-}
