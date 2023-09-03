@@ -28,32 +28,33 @@ do
 done
 
 
-# ensure pikaur AUR helper is installed
-if ! which pikaur; then
+# ensure yay AUR helper is installed
+if ! which yay; then
     sudo pacman -Syu --needed base-devel git
     cd /tmp
-    git clone https://aur.archlinux.org/pikaur.git
-    cd pikaur
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
     makepkg -fsri --noconfirm
 fi
 
 # set up chaotic-aur
-sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key FBA220DFC880C036
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
 sudo pacman -U --needed 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-# TODO: only add this config if it's not already there
+if ! grep -q '[chaotic-aur]' /etc/pacman.conf; then
 sudo tee -a /etc/pacman.conf > /dev/null <<EOT
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist
 EOT
-pikaur -Sy
+fi
+yay -Sy
 
 # install VAAPI and Vulkan drivers
-pikaur -Syu --needed $vaapi $vulkan
+yay -Syu --needed $vaapi $vulkan
 
 # install packages
 pkglist=$(cat ~/.config/yadm/packages)
-pikaur -Syu --needed $pkglist
+yay -Syu --needed $pkglist
 
 # set up apparmor auto-loading
 # TODO: set kernel cmdline params for apparmor module
