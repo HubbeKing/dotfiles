@@ -79,7 +79,6 @@ python-pycryptodome
 python-pytest
 python-tox
 qemu-desktop
-qemu-arch-extra
 qt5-imageformats
 realtime-privileges
 rebuild-detector
