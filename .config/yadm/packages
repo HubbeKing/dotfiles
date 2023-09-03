@@ -52,11 +52,9 @@ libvncserver
 lrzip
 lzop
 meld
-mpc
 mpv
 mtools
 nano-syntax-highlighting
-ncmpcpp
 nilfs-utils
 noto-fonts
 noto-fonts-cjk
@@ -72,9 +70,6 @@ podman-compose
 polkit
 proton-ge-custom-bin
 protontricks
-python37
-python38
-python39
 python-coverage
 python-llfuse
 python-pip
@@ -87,7 +82,6 @@ qt5-imageformats
 realtime-privileges
 rebuild-detector
 reiserfsprogs
-remmina
 renameutils
 rsync
 rtkit
