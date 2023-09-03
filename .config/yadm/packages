@@ -8,6 +8,7 @@ apparmor
 bash-completion
 beets
 bind
+borg
 bridge-utils
 btrfs-progs
 buildah
@@ -36,6 +37,7 @@ gst-libav
 gst-plugins-bad
 gst-plugins-good
 gst-plugins-ugly
+htop
 imagemagick
 insomnia-bin
 iptables-nft
@@ -92,6 +94,7 @@ sops
 spice-gtk
 steam
 steam-native-runtime
+strace
 streamlink
 texlab
 udftools
