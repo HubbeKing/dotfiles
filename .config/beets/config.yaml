@@ -8,17 +8,11 @@ per_disc_numbering: yes
 
 convert:
     copy_album_art: no
-    dest: ~/Music
+    dest: /mnt/array/Sync
     embed: yes
     format: opus
     never_convert_lossy_files: no
     formats:
-        mp3:
-            command: /mnt/array/Scripts/convert_to_mp3.sh $source $dest
-            extension: mp3
-        ogg:
-            command: ffmpeg -i $source -c:a libvorbis -aq 4 -af aresample=resampler=soxr -ar 44100 -vn $dest
-            extension: ogg
         opus:
             command: ffmpeg -i $source -c:a libopus -b:a 64k -af aresample=resampler=soxr -ar 48000 -vn $dest
             extension: ogg
