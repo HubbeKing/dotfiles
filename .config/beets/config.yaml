@@ -1,6 +1,6 @@
 plugins: badfiles convert edit fetchart mbsync missing scrub replaygain zero
 directory: /mnt/array/Music
-library: /mnt/array/Music/library.blb
+library: .config/beets/library.blb
 art_filename: folder
 threaded: yes
 original_date: yes
