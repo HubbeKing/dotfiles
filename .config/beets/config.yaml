@@ -1,22 +1,10 @@
-plugins: badfiles convert edit fetchart mbsync missing replaygain rewrite scrub zero
+plugins: badfiles convert edit fetchart mbsync missing replaygain rewrite zero
 directory: /mnt/array/Music
 library: library.blb
 art_filename: folder
 threaded: yes
 original_date: yes
 per_disc_numbering: yes
-
-convert:
-    copy_album_art: no
-    dest: /mnt/array/Sync
-    embed: yes
-    format: opus
-    never_convert_lossy_files: no
-    formats:
-        opus:
-            command: ffmpeg -i $source -c:a libopus -b:a 64k -af aresample=resampler=soxr -ar 48000 -vn $dest
-            extension: ogg
-
 asciify_paths: yes
 paths:
     default: $albumartist/$original_year-$album%aunique{}/$disc.$track - $title
@@ -30,14 +18,19 @@ import:
     quiet_fallback: skip
     timid: no
 
+# plugins configuration
+convert:
+    copy_album_art: no
+    dest: /mnt/array/Sync
+    embed: yes
+    format: opus
+    never_convert_lossy_files: no
+    formats:
+        opus:
+            command: ffmpeg -i $source -c:a libopus -b:a 64k -af aresample=resampler=soxr -ar 48000 -vn $dest
+            extension: ogg
+
 fetchart:
-    auto: yes
-
-replaygain:
-    auto: yes
-    backend: gstreamer
-
-scrub:
     auto: yes
 
 replace:
@@ -51,6 +44,10 @@ replace:
     '[\xF8]': o
     '\.$': _
     '\s+$': ''
+
+replaygain:
+    auto: yes
+    backend: gstreamer
 
 rewrite:
     artist Tarja Turunen: Tarja
