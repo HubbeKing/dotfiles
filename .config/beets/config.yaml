@@ -1,4 +1,4 @@
-plugins: badfiles convert edit fetchart mbsync missing scrub replaygain zero
+plugins: badfiles convert edit fetchart mbsync missing replaygain rewrite scrub zero
 directory: /mnt/array/Music
 library: library.blb
 art_filename: folder
@@ -51,6 +51,10 @@ replace:
     '[\xF8]': o
     '\.$': _
     '\s+$': ''
+
+rewrite:
+    artist Tarja Turunen: Tarja
+    artist Within Temptation.*: Within Temptation
 
 zero:
     auto: yes
