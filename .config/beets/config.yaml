@@ -1,4 +1,4 @@
-plugins: badfiles convert edit fetchart mbsync missing replaygain rewrite zero
+plugins: badfiles convert edit fetchart mbsync missing replaygain rewrite
 directory: /mnt/array/Music
 library: library.blb                # store metadata in SQLite file in .config/beets folder
 art_filename: folder                # name album cover art file "folder.ext"
@@ -21,7 +21,7 @@ import:
 # plugins configuration
 convert:
     auto_keep: yes                  # automatically transcode on import, opus goes to dest, originals go to library directory
-    copy_album_art: no              # don't copy album art file to dest
+    copy_album_art: yes             # copy album art file to dest
     dest: /mnt/array/Sync
     embed: yes                      # embed album art when transcoding
     format: opus                    # use opus (see below)
@@ -41,8 +41,3 @@ replaygain:
 rewrite:                            # some artists use kinda funky names sometimes, standardize top-level directory structure
     artist Tarja Turunen: Tarja
     artist Within Temptation.*: Within Temptation
-
-zero:                               # remove "comments" field from files when importing
-    auto: yes
-    fields: comments
-    update_database: true
