@@ -20,7 +20,6 @@ import:
 
 # plugins configuration
 convert:
-    auto_keep: yes                  # automatically transcode on import, opus goes to dest, originals go to library directory
     copy_album_art: yes             # copy album art file to dest
     dest: /mnt/array/Sync
     embed: yes                      # embed album art when transcoding
