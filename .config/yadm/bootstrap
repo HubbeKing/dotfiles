@@ -37,15 +37,6 @@ if ! which yay; then
     makepkg -fsri --noconfirm
 fi
 
-# set up chaotic-aur
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key 3056513887B78AEB
-sudo pacman -U --needed 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-if ! grep -q '[chaotic-aur]' /etc/pacman.conf; then
-  cat ~/.config/yadm/chaotic-aur.conf | sudo tee -a /etc/pacman.conf
-fi
-yay -Sy
-
 # install VAAPI and Vulkan drivers
 yay -Syu --needed $vaapi $vulkan
 
