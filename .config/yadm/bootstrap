@@ -62,5 +62,8 @@ sudo systemctl start virtlogd.service
 # set up rootless buildah & rootless podman
 echo "kernel.unprivileged_userns_clone = 1" | sudo tee /etc/sysctl.d/10-rootless-podman.conf
 sudo sysctl --system > /dev/null
-sudo touch /etc/subuid /etc/subgid
-sudo usermod --add-subuids 100000-165536 --add-subgids 100000-165536 $USER
+
+if [ ! -f /etc/subuid ]; then
+    sudo touch /etc/subuid /etc/subgid
+    sudo usermod --add-subuids 100000-165536 --add-subgids 100000-165536 $USER
+fi
