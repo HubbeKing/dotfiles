@@ -1,0 +1,8 @@
+[Unit]
+Description=Weekly compacting of borg backups
+
+[Timer]
+OnCalendar=Wed 19:00:00
+
+[Install]
+WantedBy=timers.target

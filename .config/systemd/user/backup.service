@@ -1,0 +1,8 @@
+[Unit]
+Description=Borg backup of system
+
+[Service]
+Type=oneshot
+ExecStart=/home/hubbe/Scripts/backup.sh
+StandardOutput=file:/home/hubbe/Logs/backup.log
+StandardError=file:/home/hubbe/Logs/backup.log
