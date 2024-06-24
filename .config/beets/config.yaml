@@ -35,7 +35,7 @@ fetchart:
 
 replaygain:
     auto: yes                       # automatically scan and apply replaygain tags on import
-    backend: gstreamer
+    backend: ffmpeg
 
 rewrite:                            # some artists use kinda funky names sometimes, standardize top-level directory structure
     artist Tarja Turunen: Tarja
