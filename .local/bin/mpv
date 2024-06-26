@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -z "${CONTAINER_ID}" ]; then
+    exec '/var/lib/flatpak/exports/bin/io.mpv.Mpv' "$@"
+else
+    exec distrobox-host-exec '/home/hubbe/.local/bin/mpv' "$@"
+fi
