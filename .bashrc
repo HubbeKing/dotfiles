@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 
-alias dotfs='/bin/git --git-dir=$HOME/.cfg/ --work--tree=$HOME'
+alias dotfs='/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 alias flash='sudo dd bs=64k oflag=dsync status=progress'
