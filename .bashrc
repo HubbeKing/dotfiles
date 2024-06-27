@@ -11,6 +11,7 @@ alias jdmesg='journalctl --dmesg --output=short-monotonic --no-hostname --pager-
 alias ls='ls --color=auto'
 alias units='units --verbose'
 alias virsh='virsh -c qemu:///system'
+alias yt-dlp='yt-dlp --write-subs'
 
 export SOPS_AGE_RECIPIENTS="age1j80wssnp7v6kxuga65pua3utmza4y50w243sntfyncynhp6fwpuqxkx7lc"
 
