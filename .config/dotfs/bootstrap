@@ -1,6 +1,15 @@
 #!/bin/bash
 set -e
 
+# set up dotfiles repo
+git clone --bare git@github.com:HubbeKing/dotfiles.git $HOME/.cfg
+
+function dotfs {
+  /bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+}
+dotfs checkout
+dotfs config --local status.showUntrackedFiles no
+
 # upgrade base system
 rpm-ostree upgrade
 
@@ -20,5 +29,5 @@ rpm-ostree install lact.rpm
 rm lact.rpm
 
 # install flatpaks
-flatpaks=$(cat ~/.config/yadm/flatpaks)
+flatpaks=$(cat ~/.config/dotfs/flatpaks)
 flatpak install -y $flatpaks
