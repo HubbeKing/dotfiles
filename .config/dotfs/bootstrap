@@ -27,6 +27,8 @@ rpm-ostree install distrobox libvirt podman-compose steam-devices virt-manager
 wget -O lact.rpm https://github.com/ilya-zlobintsev/LACT/releases/download/v0.5.4/lact-0.5.4-0.x86_64.fedora-40.rpm
 rpm-ostree install lact.rpm
 rm lact.rpm
+# add AMDGPU kernel arg
+rpm-ostree kargs --append=amdgpu.ppfeaturemask=0xffffffff
 
 # install flatpaks
 flatpaks=$(cat ~/.config/dotfs/flatpaks)
