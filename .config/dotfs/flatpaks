@@ -18,6 +18,7 @@ io.github.randovania.Randovania
 io.mgba.mGBA
 io.mpv.Mpv
 io.podman_desktop.PodmanDesktop
+net.lutris.Lutris
 org.DolphinEmu.dolphin-emu
 org.chromium.Chromium
 org.gnome.Lollypop
