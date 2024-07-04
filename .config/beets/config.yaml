@@ -1,5 +1,5 @@
 plugins: badfiles convert edit fetchart mbsync missing replaygain rewrite
-directory: /mnt/array/Music
+directory: /var/mnt/array/Music
 library: library.blb                # store metadata in SQLite file in .config/beets folder
 art_filename: folder                # name album cover art file "folder.ext"
 threaded: yes                       # use threads
@@ -21,7 +21,7 @@ import:
 # plugins configuration
 convert:
     copy_album_art: yes             # copy album art file to dest
-    dest: /mnt/array/Sync
+    dest: /var/mnt/array/Sync
     embed: yes                      # embed album art when transcoding
     format: opus                    # use opus (see below)
     never_convert_lossy_files: no   # convert non-FLACs as well
