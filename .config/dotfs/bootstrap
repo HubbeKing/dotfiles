@@ -18,14 +18,12 @@ rpm-ostree override remove firefox firefox-langpacks
 
 # enable steam package repo
 sudo sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo
-# download docker repo
-sudo wget -O /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/fedora/docker-ce.repo
 
 # refresh repos
 rpm-ostree refresh-md
 
 # layer on required packages
-rpm-ostree install distrobox docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin libvirt steam-devices virt-manager
+rpm-ostree install distrobox libvirt podman-compose steam-devices virt-manager
 
 # download LACT package and layer on
 wget -O lact.rpm https://github.com/ilya-zlobintsev/LACT/releases/download/v0.5.4/lact-0.5.4-0.x86_64.fedora-40.rpm
