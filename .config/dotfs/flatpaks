@@ -9,7 +9,7 @@ com.leinardi.gst
 com.nextcloud.desktopclient.nextcloud
 com.obsproject.Studio
 com.sweethome3d.Sweethome3d
-com.transmissionbt.Transmissio
+com.transmissionbt.Transmission
 com.valvesoftware.Steam
 dev.goats.xivlauncher
 im.riot.Riot
@@ -24,7 +24,7 @@ org.DolphinEmu.dolphin-emu
 org.chromium.Chromium
 org.gnome.Lollypop
 org.gnome.meld
-org.libreoffice.libreoffice
+org.libreoffice.LibreOffice
 org.libretro.RetroArch
 org.mozilla.firefox
 org.musicbrainz.Picard
