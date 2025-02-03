@@ -1,0 +1,14 @@
+/Games
+/go
+/Nextcloud
+/SteamLibrary/steamapps/common
+/SteamLibrary/steamapps/downloading
+/SteamLibrary/steamapps/shadercache
+/SteamLibrary/steamapps/temp
+/SteamLibrary/steamapps/workshop
+/.cache
+/.mozilla
+/.var/app/com.valvesoftware.Steam
+/.var/app/com.discordapp.Discord
+/.xlcore
+/.local/share/containers

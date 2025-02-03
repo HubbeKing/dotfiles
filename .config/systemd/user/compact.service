@@ -1,8 +1,0 @@
-[Unit]
-Description=Compacting backup of system
-
-[Service]
-Type=oneshot
-ExecStart=/home/hubbe/Scripts/compact_backups.sh
-StandardOutput=file:/home/hubbe/Logs/compact.log
-StandardError=file:/home/hubbe/Logs/compact.log

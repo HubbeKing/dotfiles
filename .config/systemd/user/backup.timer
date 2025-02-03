@@ -1,5 +1,5 @@
 [Unit]
-Description=Daily borg backup
+Description=Daily restic backup
 
 [Timer]
 OnCalendar=*-*-* 18:00:00

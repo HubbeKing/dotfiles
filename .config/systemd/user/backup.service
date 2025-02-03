@@ -1,5 +1,5 @@
 [Unit]
-Description=Borg backup of system
+Description=restic backup of system
 
 [Service]
 Type=oneshot
