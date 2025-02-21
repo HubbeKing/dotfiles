@@ -4,5 +4,5 @@ Description=restic backup of system
 [Service]
 Type=oneshot
 ExecStart=/home/hubbe/Scripts/backup.sh
-StandardOutput=file:/home/hubbe/Logs/backup.log
-StandardError=file:/home/hubbe/Logs/backup.log
+StandardOutput=truncate:/home/hubbe/Logs/backup.log
+StandardError=truncate:/home/hubbe/Logs/backup.log
