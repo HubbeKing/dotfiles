@@ -2,11 +2,11 @@
 /home/hubbe/go
 /home/hubbe/Nextcloud
 /home/hubbe/Projects/work
-/home/hubbe/SteamLibrary/steamapps/common
-/home/hubbe/SteamLibrary/steamapps/downloading
-/home/hubbe/SteamLibrary/steamapps/shadercache
-/home/hubbe/SteamLibrary/steamapps/temp
-/home/hubbe/SteamLibrary/steamapps/workshop
+/home/hubbe/Steam/Library/steamapps/common
+/home/hubbe/Steam/Library/steamapps/downloading
+/home/hubbe/Steam/Library/steamapps/shadercache
+/home/hubbe/Steam/Library/steamapps/temp
+/home/hubbe/Steam/Library/steamapps/workshop
 /home/hubbe/.cache
 /home/hubbe/.local/share/containers
 /home/hubbe/.mozilla
