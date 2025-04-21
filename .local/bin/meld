@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [ -z "${CONTAINER_ID}" ]; then
-    exec '/var/lib/flatpak/exports/bin/org.gnome.meld' "$@"
-else
-    exec distrobox-host-exec '/home/hubbe/.local/bin/meld' "$@"
-fi
