@@ -7,10 +7,16 @@ rpm-ostree upgrade
 packages=$(cat ~/.config/bootstrap/packages.lst)
 rpm-ostree install $packages
 
+# enable steam nonfree repo
+sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo
+# stage steam-devices package (needed for steam flatpak)
+rpm-ostree refresh-md
+rpm-ostree install steam-packages
+
 # set up rpmfusion repos
 # https://rpmfusion.org/Howto/OSTree
 sudo rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-# TODO: reboot, then do "cleanup" step to make fedora base upgrades cleaner 
+# TODO: reboot, then do "cleanup" step to make fedora base upgrades cleaner
 #sudo rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release --install rpmfusion-free-release --install rpmfusion-nonfree-release
 
 # TODO: after reboot, do codec stuff
