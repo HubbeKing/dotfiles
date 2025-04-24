@@ -1,6 +1,4 @@
 ansible-core
-beets
-beets-plugins
 golang
 golang-github-google-jsonnet
 golang-github-jsonnet-bundler
