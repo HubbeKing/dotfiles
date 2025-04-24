@@ -2,7 +2,6 @@
 # ~/.bashrc
 #
 
-alias dent='distrobox-enter'
 alias dotfs='/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
