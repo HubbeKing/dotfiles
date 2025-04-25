@@ -1,11 +1,7 @@
 ansible-core
-golang
-golang-github-google-jsonnet
-golang-github-jsonnet-bundler
 htop
 kubernetes1.32-client
 libva-utils
-meld
 mpv
 nvtop
 openscad
