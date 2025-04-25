@@ -1,4 +1,5 @@
 ansible-core
+git-lfs
 htop
 kubernetes1.32-client
 libva-utils
