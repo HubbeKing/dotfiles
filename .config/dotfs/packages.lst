@@ -5,6 +5,5 @@ kubernetes1.32-client
 libva-utils
 mpv
 nvtop
-openscad
 restic
 strace
