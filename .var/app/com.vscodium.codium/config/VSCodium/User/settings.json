@@ -8,4 +8,5 @@
         "overrideName": true
       }
     },
+    "git.openRepositoryInParentFolders": "always",
 }
