@@ -1,11 +1,13 @@
 ansible-core
 distrobox
-git-lfs
 htop
 kubernetes1.32-client
 libva-utils
 mpv
 nvtop
+podman-docker
+renameutils
 restic
 strace
+units
 yt-dlp
