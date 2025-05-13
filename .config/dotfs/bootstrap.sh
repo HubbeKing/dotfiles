@@ -20,11 +20,6 @@ sudo mv luminoso-k9s-fedora-42.repo /etc/yum.repos.d/
 # stage k9s package
 rpm-ostree install --idempotent k9s
 
-# set up lact copr repo
-wget https://copr.fedorainfracloud.org/coprs/ilyaz/LACT/repo/fedora-42/ilyaz-LACT-fedora-42.repo
-sudo mv ilyaz-LACT-fedora-42.repo /etc/yum.repos.d/
-# stage lact package
-rpm-ostree install --idempotent lact
 # add AMDGPU kernel arg for overclocking
 rpm-ostree kargs --append-if-missing=amdgpu.ppfeaturemask=0xffffffff
 
