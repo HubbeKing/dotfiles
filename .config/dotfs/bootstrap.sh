@@ -4,6 +4,9 @@ set -e
 # stage updates
 rpm-ostree upgrade
 
+# remove firefox from base
+rpm-ostree override remove firefox firefox-langpacks
+
 # stage packages from bootstrap list
 packages=$(cat ~/.config/dotfs/packages.lst)
 rpm-ostree install --idempotent $packages
