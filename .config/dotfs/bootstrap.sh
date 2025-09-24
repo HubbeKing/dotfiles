@@ -14,12 +14,6 @@ sudo sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-steam.re
 rpm-ostree refresh-md
 rpm-ostree install --idempotent steam-devices
 
-# set up k9s copr repo
-wget https://copr.fedorainfracloud.org/coprs/luminoso/k9s/repo/fedora-42/luminoso-k9s-fedora-42.repo
-sudo mv luminoso-k9s-fedora-42.repo /etc/yum.repos.d/
-# stage k9s package
-rpm-ostree install --idempotent k9s
-
 # add AMDGPU kernel arg for overclocking
 rpm-ostree kargs --append-if-missing=amdgpu.ppfeaturemask=0xffffffff
 
@@ -30,13 +24,9 @@ flatpak install --or-update $flatpaks
 # set up overrides for VSCodium
 flatpak override --user com.vscodium.codium --filesystem=~/.var/app
 
-# install OrcaSlicer
-wget https://github.com/SoftFever/OrcaSlicer/releases/download/v2.3.0/OrcaSlicer-Linux-flatpak_V2.3.0_x86_64.flatpak
-flatpak install --or-update ./OrcaSlicer-Linux-flatpak_V2.3.0_x86_64.flatpak
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# set up rpmfusion repos
-# this needs to be done last, before reboot, because it breaks the md-refresh steps of rpm-ostree
-# https://rpmfusion.org/Howto/OSTree
-sudo rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-echo "Bootstrap complete - Please reboot system, and then run .config/dotfs/post-reboot.sh"
+# install brew packages
+packages=$(cat ~/.config/dotfs/brews.lst)
+brew install $packages
