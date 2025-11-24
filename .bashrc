@@ -30,4 +30,9 @@ if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+# source homebrew bash completions
+if [ -x "/home/linuxbrew/.linuxbrew/etc/bash_completion.d" ]; then
+  . /home/linuxbrew/.linuxbrew/etc/bash_completion.d/*
+fi
+
 unset rc
