@@ -1,5 +1,6 @@
 ansible
-ffmpeg
+go-jsonnet
+jsonnet-bundler
 k9s
 kubernetes-cli
 renameutils

@@ -33,3 +33,7 @@ flatpak override --user com.vscodium.codium --filesystem=~/.var/app
 # install brew packages
 packages=$(cat ~/.config/dotfs/brews.lst)
 brew install $packages
+
+# install rpmfusion repo
+sudo rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+echo "Bootstrap complete. To finalize bootstrap, reboot and run .config/dotfs/post-reboot.sh and reboot again"
