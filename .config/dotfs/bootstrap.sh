@@ -4,18 +4,13 @@ set -e
 # stage updates
 rpm-ostree upgrade
 
-# remove firefox from base
-rpm-ostree override remove firefox firefox-langpacks
+# add terra.pkg repo
+curl -fsSL https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo | sudo tee /etc/yum.repos.d/terra.repo
+rpm-ostree install --idempotent terra-release
 
 # stage packages from bootstrap list
 packages=$(cat ~/.config/dotfs/packages.lst)
 rpm-ostree install --idempotent $packages
-
-# enable steam nonfree repo
-sudo sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo
-# stage steam-devices package (needed for steam flatpak)
-rpm-ostree refresh-md
-rpm-ostree install --idempotent steam-devices
 
 # add AMDGPU kernel arg for overclocking
 rpm-ostree kargs --append-if-missing=amdgpu.ppfeaturemask=0xffffffff
@@ -24,16 +19,9 @@ rpm-ostree kargs --append-if-missing=amdgpu.ppfeaturemask=0xffffffff
 flatpaks=$(cat ~/.config/dotfs/flatpaks.lst)
 flatpak install --or-update $flatpaks
 
-# set up overrides for VSCodium
-flatpak override --user com.vscodium.codium --filesystem=~/.var/app
-
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install brew packages
 packages=$(cat ~/.config/dotfs/brews.lst)
 brew install $packages
-
-# install rpmfusion repo
-sudo rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-echo "Bootstrap complete. To finalize bootstrap, reboot and run .config/dotfs/post-reboot.sh and reboot again"

@@ -1,5 +1,1 @@
-docker
-docker-compose
-htop
-nvtop
-strace
+python3-devel rustup zed
