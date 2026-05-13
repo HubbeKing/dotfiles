@@ -1,0 +1,23 @@
+{
+    "filament_extruder_variant": [
+        "Direct Drive Standard",
+        "Direct Drive High Flow"
+    ],
+    "filament_max_volumetric_speed": [
+        "28",
+        "21"
+    ],
+    "filament_settings_id": [
+        "Bambu PLA Basic @P1S 0.4 HF"
+    ],
+    "from": "User",
+    "inherits": "Bambu PLA Basic @BBL X1C",
+    "name": "Bambu PLA Basic @P1S 0.4 HF",
+    "supertack_plate_temp": [
+        "50"
+    ],
+    "supertack_plate_temp_initial_layer": [
+        "50"
+    ],
+    "version": "2.1.0.10"
+}

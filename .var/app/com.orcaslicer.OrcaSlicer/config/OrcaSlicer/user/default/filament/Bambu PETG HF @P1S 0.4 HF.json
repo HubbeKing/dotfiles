@@ -1,0 +1,17 @@
+{
+    "filament_extruder_variant": [
+        "Direct Drive Standard",
+        "Direct Drive High Flow"
+    ],
+    "filament_max_volumetric_speed": [
+        "28",
+        "21"
+    ],
+    "filament_settings_id": [
+        "Bambu PETG HF @P1S 0.4 HF"
+    ],
+    "from": "User",
+    "inherits": "Bambu PETG HF @BBL X1C",
+    "name": "Bambu PETG HF @P1S 0.4 HF",
+    "version": "2.1.0.10"
+}
