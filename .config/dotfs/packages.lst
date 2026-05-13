@@ -1,1 +1,8 @@
-python3-devel rustup zed
+code
+docker-buildx-plugin
+docker-ce
+docker-ce-cli
+docker-ce-rootless-extras
+docker-compose-plugin
+git-lfs
+steam-devices

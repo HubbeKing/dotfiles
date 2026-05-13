@@ -1,14 +1,17 @@
 #!/bin/bash
 set -e
 
-# stage updates
+# enable docker-ce repo
+sed -i 's/enabled=0/enabled=1/g' /etc/yum.repos.d/docker-ce.repo
+# enable steam repo
+sed -i 's/enabled=0/enabled=1/g' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo
+# enable vscode repo
+sed -i 's/enabled=0/enabled=1/g' /etc/yum.repos.d/vscode.repo
+
+# upgrade base OS
 rpm-ostree upgrade
 
-# add terra.pkg repo
-curl -fsSL https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo | sudo tee /etc/yum.repos.d/terra.repo
-rpm-ostree install --idempotent terra-release
-
-# stage packages from bootstrap list
+# overlay dev packages
 packages=$(cat ~/.config/dotfs/packages.lst)
 rpm-ostree install --idempotent $packages
 
