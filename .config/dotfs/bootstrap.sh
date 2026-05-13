@@ -3,8 +3,6 @@ set -e
 
 # enable docker-ce repo
 sed -i 's/enabled=0/enabled=1/g' /etc/yum.repos.d/docker-ce.repo
-# enable steam repo
-sed -i 's/enabled=0/enabled=1/g' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo
 # enable vscode repo
 sed -i 's/enabled=0/enabled=1/g' /etc/yum.repos.d/vscode.repo
 
