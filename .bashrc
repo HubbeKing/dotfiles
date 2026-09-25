@@ -14,6 +14,8 @@ alias yt-dlp='yt-dlp --embed-subs'
 
 export SOPS_AGE_RECIPIENTS="age1j80wssnp7v6kxuga65pua3utmza4y50w243sntfyncynhp6fwpuqxkx7lc"
 
+export EDITOR=/usr/bin/nano
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
